@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>New Indicator</h1>
+<form action="{{url_for("page_indicator_add")}}" method="post">
+    <label for="name" class="form-label">Indicator short name</label>
+    <input class="form-control" type="text" id="name" name="name" required minlength="5" size="40">
+    <label for="description" class="form-label">Indicator description</label>
+    <input class="form-control" type="text" id="description" name="description" required>
+    <label for="datatype" class="form-label">Data type</label>
+    <select name="datatype" class="form-select" id="datatype" aria-label="Data type select">
+      <option value="qualitative">Qualitative</option>
+      <option value="quantitative">Quantitative</option>
+    </select>
+    <label class="form-label">Chain step</label>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        Default checkbox
+      </label>
+    </div>
+    
+
+    <button type="submit" name="action_save" value="save" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}

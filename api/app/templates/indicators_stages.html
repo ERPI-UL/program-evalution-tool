@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% from 'base/utils.html' import render_icon%}
+
+{% block content %}
+<h1>List of the indicators</h1>
+    <ul class="nav nav-tabs nav-fill">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('page_all_indicators') }}">All indicators</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page"  href="{{ url_for('page_indicators_per_stage') }}">Indicators per stage</a>
+        </li>
+        
+      </ul>
+
+      
+      <table class="table">
+        <thead>
+            <tr>
+                <th scope ="col">Input</th>
+                <th scope ="col">Activity</th>
+                <th scope ="col">Output</th>
+                <th scope ="col">Outcome</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for program in programs %}
+            <tr>
+                <th scope="row">{{ program.name }}</th>
+                <td>{{ program.startDate }}</td>
+                <td>{{ program.endDate }}</td>
+                <td>
+                    <a class="action-icon text-decoration-none" href="" title="{{ config['BOOTSTRAP_TABLE_VIEW_TITLE'] }}">{{ render_icon('eye-fill') }}</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+<p>This demo uses the OntoCosmetic ontology to valisation formluation of cosmetic product.</p>
+
+{% endblock %}

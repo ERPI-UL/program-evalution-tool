@@ -1,0 +1,53 @@
+[
+    {
+        "id": "45698",
+        "name": "SIRIUS",
+        "start": "02/2022",
+        "end": "12/2029",
+        "workpackage": [
+            {
+                "name": "global",
+                "id": "global",
+                "done": false
+            },
+            {
+                "name": "4SH",
+                "id": "4sh",
+                "done": true
+            },
+            {
+                "name": "360 booster",
+                "id": "360booster",
+                "done": false
+            },
+            {
+                "name": "strategique communication",
+                "id": "strat_comm",
+                "done": false
+            },
+            {
+                "name": "Deep change lab",
+                "id": "dcl",
+                "done": true
+            }
+        ]
+    },
+    {
+        "id": "45696",
+        "name": "Random",
+        "start": "07/2023",
+        "end": "06/2028",
+        "workpackage": [
+            {
+                "name": "wp1",
+                "id": "wp1",
+                "done": false
+            },
+            {
+                "name": "wp2",
+                "id": "wp2",
+                "done": false
+            }
+        ]
+    }
+]

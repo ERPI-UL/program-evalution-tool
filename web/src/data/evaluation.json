@@ -1,0 +1,21 @@
+[
+    {
+      "name": "SIRIUS",
+      "id": "45698",
+      "workpackage": [
+        { "name": "global", "done": false },
+        { "name": "4SH", "done": true },
+        { "name": "360 booster", "done": false },
+        { "name": "strategique communication", "done": false },
+        { "name": "Deep change lab", "done": true }
+      ]
+    },
+    {
+      "name": "test1",
+      "id": "45696",
+      "workpackage": [
+        { "name": "Lorem", "done": false },
+        { "name": "Ipsum", "done": true }
+      ]
+    }
+  ]

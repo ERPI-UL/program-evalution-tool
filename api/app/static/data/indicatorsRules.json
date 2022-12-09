@@ -1,0 +1,1 @@
+{"Collections":[{"sheetName":"Feuil1","startColumn":"A","endColumn":"E","startRow":"2","endRow":"48","comment":"","rule":"Individual: @A*\nTypes: Indicator\nAnnotations: rdfs:comment @B*(xml:lang\u003d\"en\")\nFacts: hasResultChainStep @C*,\ncollect @D*,\nhasOrigin @E*","active":true}]}

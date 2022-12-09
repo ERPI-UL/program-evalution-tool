@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% from 'base/utils.html' import render_icon%}
+
+{% block content %}
+    <h1>New Program</h1>
+<form action="{{url_for("page_add_program")}}" method="post">
+    <label for="name" class="form-label">Program name</label>
+    <input class="form-control" type="text" id="name" name="name" required minlength="5" size="40">
+    <label for="description" class="form-label">Description</label>
+    <input class="form-control" type="text" id="description" name="description" required>
+    <label for="startdate" class="form-label">Start date</label>
+    <input class="form-control" type="date" id="startdate" name="startdate">
+    <label for="enddate" class="form-label">End date</label>
+    <input class="form-control" type="date" id="enddate" name="enddate">
+    <label for="workpackage" class="form-label" >Work package (split with a semi columns ; ) </label>
+        <input class="form-control" type="text" id="workpackage" name="workpackage">
+    <button type="submit" name="action_save" value="save" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}

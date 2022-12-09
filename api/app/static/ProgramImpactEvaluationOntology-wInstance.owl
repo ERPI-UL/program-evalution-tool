@@ -1,0 +1,667 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/pieo#"
+     xml:base="http://purl.org/pieo"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:pieo="http://purl.org/pieo#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://purl.org/pieo">
+        <owl:versionIRI rdf:resource="http://purl.org/pieo/1.0"/>
+        <dc:description xml:lang="en">This ontology defines a vocabulary that describe the different concept related to program impact evaluation. It is used as basement for creating a digial system that would assist policy-maker when designing policy program and identify the adapted indicators.</dc:description>
+        <dc:title xml:lang="en">Ontology for Program Impact Evaluation</dc:title>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/pieo#collect -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pieo#collect">
+        <rdfs:domain rdf:resource="http://purl.org/pieo#Indicator"/>
+        <rdfs:range rdf:resource="http://purl.org/pieo#DataType"/>
+        <rdfs:comment xml:lang="fr">Relation qui lie un indicateur avec un type de données. Cela définie le type de données collecté par l&apos;indicateur.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relationship that links an indicator with a type of data. This defines the type of data collected by the indicator.</rdfs:comment>
+        <rdfs:label xml:lang="en">collect</rdfs:label>
+        <rdfs:label xml:lang="fr">collecte</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/pieo#defineLogicOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pieo#defineLogicOf">
+        <rdfs:domain rdf:resource="http://purl.org/pieo#ResultsChain"/>
+        <rdfs:range rdf:resource="http://purl.org/pieo#Program"/>
+        <rdfs:comment xml:lang="fr">Relation qui lie une chaine de résultats avec un programme. La chaine de résultats comment les objectifs de développement du programme seront atteints.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relationship that links a chain of results with a program. The chain of results how the program&apos;s development objectives will be achieved.</rdfs:comment>
+        <rdfs:label xml:lang="en">define logic of</rdfs:label>
+        <rdfs:label xml:lang="fr">définit le logique de</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/pieo#evaluate -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pieo#evaluate">
+        <rdfs:domain rdf:resource="http://purl.org/pieo#EvaluationApproach"/>
+        <rdfs:range rdf:resource="http://purl.org/pieo#Program"/>
+        <rdfs:comment xml:lang="fr">Relation qui lie une démarche d&apos;évaluation avec un programme.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relationship that links an evaluation approach with a program.</rdfs:comment>
+        <rdfs:label xml:lang="en">evaluate</rdfs:label>
+        <rdfs:label xml:lang="fr">évalue</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/pieo#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pieo#isPartOf">
+        <rdfs:domain rdf:resource="http://purl.org/pieo#stakeholder"/>
+        <rdfs:range rdf:resource="http://purl.org/pieo#environment"/>
+        <rdfs:comment xml:lang="fr">Relation qui lie une partie prenante avec son environement économique.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relationship that links a stakeholder with its economic environment.</rdfs:comment>
+        <rdfs:label xml:lang="fr">fait partie de</rdfs:label>
+        <rdfs:label xml:lang="en">is part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/pieo#measure -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pieo#measure">
+        <rdfs:label xml:lang="en">measure</rdfs:label>
+        <rdfs:label xml:lang="fr">mesure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/pieo#takePlaceIn -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pieo#takePlaceIn">
+        <rdfs:domain rdf:resource="http://purl.org/pieo#Program"/>
+        <rdfs:range rdf:resource="http://purl.org/pieo#environment"/>
+        <rdfs:comment xml:lang="en">Relation qui lie un programme avec son environement économique.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Relation qui lie un programme avec son environement économique.</rdfs:comment>
+        <rdfs:label xml:lang="fr">s&apos;effectue dans</rdfs:label>
+        <rdfs:label xml:lang="en">take place in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/pieo#useDataType -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pieo#useDataType">
+        <rdfs:domain rdf:resource="http://purl.org/pieo#EvaluationApproach"/>
+        <rdfs:range rdf:resource="http://purl.org/pieo#DataType"/>
+        <rdfs:comment xml:lang="en">A relationship that links an evaluation approach with a type of data. It defines on which type of data an evaluation approach is based.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Relation qui lie une démarche d&apos;évaluation avec un type de données. Ce definie sur quel type de données une démarche d&apos;évaluation se base.</rdfs:comment>
+        <rdfs:label xml:lang="en">use data type</rdfs:label>
+        <rdfs:label xml:lang="fr">utilise le type de données</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/pieo#hasEndDate -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/pieo#hasEndDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/pieo#hasStartDate -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/pieo#hasStartDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/pieo#Action -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#Action">
+        <owl:equivalentClass rdf:resource="http://purl.org/pieo#Initiative"/>
+        <rdfs:comment xml:lang="fr">C’est la réalisation d’une ou plusieurs taches dans le but de contribuer à la satisfaction d’un objectif.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#DataType -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#DataType">
+        <rdfs:comment xml:lang="fr">Définie les différents types de données qui peuvent être collectés par un indicateur ou une démarche d&apos;évaluation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Defines the different types of data that can be collected by an indicator or assessment process.</rdfs:label>
+        <rdfs:label xml:lang="en">data type</rdfs:label>
+        <rdfs:label xml:lang="fr">type de données</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#EffectivenessIndicator -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#EffectivenessIndicator">
+        <rdfs:subClassOf rdf:resource="http://purl.org/pieo#Indicator"/>
+        <rdfs:label xml:lang="en">Effectiveness Indicator</rdfs:label>
+        <rdfs:label xml:lang="fr">Indicateur d&apos;éfficacité</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#EfficiencyIndicator -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#EfficiencyIndicator">
+        <rdfs:subClassOf rdf:resource="http://purl.org/pieo#Indicator"/>
+        <rdfs:label xml:lang="en">Efficiency indicator</rdfs:label>
+        <rdfs:label xml:lang="fr">indicateur d&apos;efficience</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#EvaluationApproach -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#EvaluationApproach">
+        <rdfs:comment xml:lang="fr">C&apos;est une démarche qui a pour objectif d&apos;évaluer la mise en oeuvre d&apos;un programme.</rdfs:comment>
+        <rdfs:comment xml:lang="en">It is an approach that aims to evaluate the implementation of a program.</rdfs:comment>
+        <rdfs:label xml:lang="en">Evaluation approach</rdfs:label>
+        <rdfs:label xml:lang="fr">démarche d&apos;évaluation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#EvaluationType -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#EvaluationType">
+        <rdfs:label xml:lang="en">evaluation type</rdfs:label>
+        <rdfs:label xml:lang="fr">type d&apos;évaluation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#FinalOutcome -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#FinalOutcome">
+        <rdfs:subClassOf rdf:resource="http://purl.org/pieo#element_chaine_resultats"/>
+        <rdfs:comment xml:lang="fr">Les résultats finaux obtenus indiquant si les objectifs du projet ont été atteints. En général, les résultats finaux peuvent être influencés par de multiples facteurs et sont atteints sur une plus longue période de temps.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The final results achieved indicate whether the project&apos;s objectives have been met. In general, final outcomes can be influenced by multiple factors and are achieved over a longer period of time.</rdfs:comment>
+        <rdfs:label xml:lang="en">final outcome</rdfs:label>
+        <rdfs:label xml:lang="fr">résultat final</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#ImpactEvaluation -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#ImpactEvaluation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/pieo#EvaluationApproach"/>
+        <rdfs:label xml:lang="fr">Etude d&apos;impact</rdfs:label>
+        <rdfs:label xml:lang="en">Impact evaluation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#Indicator -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#Indicator">
+        <rdfs:comment xml:lang="en">A variable that measures a phenomenon of interest to the evaluation team. The phenomenon can be an input, an output, an outcome, a characteristic, or an attribute.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une variable qui mesure un phénomène intéressant l&apos;équipe d&apos;évaluation. Le phénomène peut être un intrant, un extrant, un résultat, une caractéristique ou un attribut.</rdfs:comment>
+        <rdfs:label xml:lang="fr">indicateur</rdfs:label>
+        <rdfs:label xml:lang="en">indicator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#Initiative -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#Initiative"/>
+    
+
+
+    <!-- http://purl.org/pieo#Objective -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#Objective">
+        <rdfs:comment xml:lang="fr">C’est le résultat attendu d’une action ou d’un ensemble d’action.</rdfs:comment>
+        <rdfs:label xml:lang="fr">objectif</rdfs:label>
+        <rdfs:label xml:lang="en">objective</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#Outcome -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#Outcome">
+        <rdfs:subClassOf rdf:resource="http://purl.org/pieo#element_chaine_resultats"/>
+        <rdfs:label xml:lang="en">outcome</rdfs:label>
+        <rdfs:label xml:lang="fr">résultat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#Output -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#Output">
+        <rdfs:subClassOf rdf:resource="http://purl.org/pieo#element_chaine_resultats"/>
+        <rdfs:comment xml:lang="fr">Les produits tangibles, les biens et les services qui sont produits (fournis) directement par les activités d&apos;un programme. La livraison des extrants est directement sous le contrôle de l&apos;agence chargée de la mise en œuvre du programme. L&apos;utilisation des extrants par les bénéficiaires contribue aux changements dans les résultats.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The tangible products, goods, and services that are produced (supplied) directly by a program’s activities. The delivery of outputs is directly under the control of the program-implementing agency. The use of outputs by beneficiaries contributes to changes in outcomes.</rdfs:comment>
+        <rdfs:label xml:lang="en">output</rdfs:label>
+        <rdfs:label xml:lang="fr">production</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#Partner -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#Partner">
+        <rdfs:subClassOf rdf:resource="http://purl.org/pieo#stakeholder"/>
+        <rdfs:label xml:lang="fr">Partenaire</rdfs:label>
+        <rdfs:label xml:lang="en">Partner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#ProcessEvaluation -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#ProcessEvaluation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/pieo#EvaluationApproach"/>
+        <rdfs:comment xml:lang="fr">Il s&apos;agit d&apos;une approche qui se concentre sur la manière dont un programme est mis en œuvre et fonctionne, en évaluant s&apos;il est conforme à sa conception initiale et en documentant son développement et son fonctionnement. (Gertler et al., 2016 - Impact Evaluation in Practice)</rdfs:comment>
+        <rdfs:comment xml:lang="en">It is an approach that focus on how a program is implemented and operates, assessing whether it conforms to its original design and documenting its development and operation.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Evaluation des processus</rdfs:label>
+        <rdfs:label xml:lang="en">Process evaluation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#Program -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#Program">
+        <rdfs:label xml:lang="en">Program</rdfs:label>
+        <rdfs:label xml:lang="fr">Programme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#QualitativeIndicator -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#QualitativeIndicator">
+        <rdfs:subClassOf rdf:resource="http://purl.org/pieo#Indicator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#QuantitativeIndicator -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#QuantitativeIndicator">
+        <rdfs:subClassOf rdf:resource="http://purl.org/pieo#Indicator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#QuestionType -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#QuestionType">
+        <rdfs:comment xml:lang="en">An evaluation is trying to answer to a question. Evaluations can address three types of questions.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une évaluation tente de répondre à une question. Les évaluations peuvent répondre à trois types de questions.</rdfs:comment>
+        <rdfs:label xml:lang="en">evaluation question type</rdfs:label>
+        <rdfs:label xml:lang="fr">type de question d&apos;évaluation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#ResultsChain -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#ResultsChain">
+        <rdfs:comment xml:lang="fr">Définit la logique du programme en expliquant comment l&apos;objectif de développement doit être atteint. Il articule la séquence des intrants, des activités et des extrants qui sont censés améliorer les résultats.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Sets out the program logic by explaining how the development objective is to be achieved. It articulates the sequence of inputs, activities, and outputs that are expected to improve outcomes.</rdfs:comment>
+        <rdfs:label xml:lang="fr">chaine de résultats</rdfs:label>
+        <rdfs:label xml:lang="en">results chain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#ResultsChainPhase -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#ResultsChainPhase">
+        <rdfs:comment xml:lang="fr">La chaine de résultats est strucuré en 5 phases. Cela pemet de formaliser la mise en oeuvre d&apos;un programme.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The results chain is structured in 5 phases. This allows to formalize the implementation of a program.</rdfs:comment>
+        <rdfs:label xml:lang="en">Result chain phase</rdfs:label>
+        <rdfs:label xml:lang="fr">phase de chaine de résultats</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#SustainabilityIndicator -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#SustainabilityIndicator">
+        <rdfs:subClassOf rdf:resource="http://purl.org/pieo#Indicator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#TheoryOfChange -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#TheoryOfChange">
+        <rdfs:comment xml:lang="fr">Cela décrit comment le projet est censé atteindre les résultats escomptés.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This describes how the project is expected to achieve its intended results.</rdfs:comment>
+        <rdfs:label xml:lang="en">theory of change</rdfs:label>
+        <rdfs:label xml:lang="fr">théorie du changement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#activity -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#activity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/pieo#element_chaine_resultats"/>
+        <rdfs:comment xml:lang="fr">Actions entreprises ou travaux réalisés par lesquels des intrants, tels que des fonds, une assistance technique et d&apos;autres types de ressources, sont mobilisés pour produire des résultats spécifiques, tels que l&apos;argent dépensé, les manuels scolaires distribués ou le nombre de participants inscrits à un programme d&apos;emploi.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Actions taken or work performed through which inputs, such as funds, technical assistance, and other types of resources, are mobilized to produce specific outputs, such as money spent, textbooks distributed, or number of participants enrolled in an employment program.</rdfs:comment>
+        <rdfs:label xml:lang="en">activity</rdfs:label>
+        <rdfs:label xml:lang="fr">activité</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#but -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#but"/>
+    
+
+
+    <!-- http://purl.org/pieo#element_chaine_resultats -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#element_chaine_resultats">
+        <rdfs:label xml:lang="fr">Elements de la chaine de résultats</rdfs:label>
+        <rdfs:label xml:lang="en">Elements of a Results Chain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#environment -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#environment"/>
+    
+
+
+    <!-- http://purl.org/pieo#finalite -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#finalite"/>
+    
+
+
+    <!-- http://purl.org/pieo#inputs -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#inputs">
+        <rdfs:subClassOf rdf:resource="http://purl.org/pieo#element_chaine_resultats"/>
+        <rdfs:comment xml:lang="fr">Les ressources financières, humaines et matérielles utilisées pour l&apos;intervention.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The financial, human, and material resources used for the intervention.</rdfs:comment>
+        <rdfs:label xml:lang="en">inputs</rdfs:label>
+        <rdfs:label xml:lang="fr">intrant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#macro -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#macro">
+        <rdfs:subClassOf rdf:resource="http://purl.org/pieo#environment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#meso -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#meso">
+        <rdfs:subClassOf rdf:resource="http://purl.org/pieo#environment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#micro -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#micro">
+        <rdfs:subClassOf rdf:resource="http://purl.org/pieo#environment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/pieo#stakeholder -->
+
+    <owl:Class rdf:about="http://purl.org/pieo#stakeholder">
+        <rdfs:label xml:lang="fr">Partie prenante</rdfs:label>
+        <rdfs:label xml:lang="en">Stakeholder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/pieo#Cause-and-effect_question -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/pieo#Cause-and-effect_question">
+        <rdf:type rdf:resource="http://purl.org/pieo#QuestionType"/>
+        <rdfs:comment xml:lang="fr">Elle est axée sur l&apos;attribution. Elles demandent quelle est la différence entre l&apos;intervention et les résultats.</rdfs:comment>
+        <rdfs:comment xml:lang="en">It focuses on attribution. They ask about what difference the intervention makes to outcomes.</rdfs:comment>
+        <rdfs:label xml:lang="en">cause-and-effect question</rdfs:label>
+        <rdfs:label xml:lang="fr">question de cause à effet</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/pieo#SIRIUS -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/pieo#SIRIUS">
+        <rdf:type rdf:resource="http://purl.org/pieo#Program"/>
+        <hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1887963291</hasEndDate>
+        <hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1667818699</hasStartDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/pieo#SIRIUS_eval -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/pieo#SIRIUS_eval">
+        <rdf:type rdf:resource="http://purl.org/pieo#EvaluationApproach"/>
+        <evaluate rdf:resource="http://purl.org/pieo#SIRIUS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/pieo#cumulative_data -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/pieo#cumulative_data">
+        <rdf:type rdf:resource="http://purl.org/pieo#DataType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/pieo#descriptive_question -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/pieo#descriptive_question">
+        <rdf:type rdf:resource="http://purl.org/pieo#QuestionType"/>
+        <rdfs:comment xml:lang="fr">Elle pose des questions sur ce qui se passe. Elles portent sur les processus, les conditions, les relations organisationnelles et les points de vue des parties prenantes.</rdfs:comment>
+        <rdfs:comment xml:lang="en">It asks about what is taking place. They are concerned with processes, conditions, organizational relationships, and stakeholder views.</rdfs:comment>
+        <rdfs:label xml:lang="en">descriptive question</rdfs:label>
+        <rdfs:label xml:lang="fr">question descriptive</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/pieo#evaluation -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/pieo#evaluation">
+        <rdf:type rdf:resource="http://purl.org/pieo#EvaluationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/pieo#ex_ante_simulation -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/pieo#ex_ante_simulation">
+        <rdf:type rdf:resource="http://purl.org/pieo#EvaluationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/pieo#impact_evaluation -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/pieo#impact_evaluation">
+        <rdf:type rdf:resource="http://purl.org/pieo#EvaluationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/pieo#mixed_method_evaluation -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/pieo#mixed_method_evaluation">
+        <rdf:type rdf:resource="http://purl.org/pieo#EvaluationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/pieo#monitoring -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/pieo#monitoring">
+        <rdf:type rdf:resource="http://purl.org/pieo#EvaluationType"/>
+        <rdfs:comment xml:lang="fr">Il permet de vérifier si les activités sont mises en œuvre comme prévu. Le suivi est essentiel pour vérifier qu&apos;un bénéficiaire participe effectivement au programme et qu&apos;un non-bénéficiaire n&apos;y participe pas.</rdfs:comment>
+        <rdfs:comment xml:lang="en">It lets verify whether activities are being implemented as planned. Monitoring is critical to checking that a beneficiary actually participates in the program and that a nonbeneficiary does not participate.</rdfs:comment>
+        <rdfs:label xml:lang="en">monitoring</rdfs:label>
+        <rdfs:label xml:lang="fr">suivi (monitoring)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/pieo#normative_question -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/pieo#normative_question">
+        <rdf:type rdf:resource="http://purl.org/pieo#QuestionType"/>
+        <rdfs:comment xml:lang="fr">Elle compare ce qui se passe à ce qui devrait se passer.
+Elles permettent d&apos;évaluer les activités et de déterminer si les objectifs sont atteints ou non. Les questions normatives peuvent s&apos;appliquer aux intrants, aux activités et aux produits.</rdfs:comment>
+        <rdfs:comment xml:lang="en">It compares what is taking place to what should be  taking place.
+They assess activities and whether or not targets are accomplished. Normative questions can apply to inputs, activities, and outputs.</rdfs:comment>
+        <rdfs:label xml:lang="en">normative question</rdfs:label>
+        <rdfs:label xml:lang="fr">question normative</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/pieo#process_evaluation -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/pieo#process_evaluation">
+        <rdf:type rdf:resource="http://purl.org/pieo#EvaluationType"/>
+        <rdfs:label xml:lang="en">process evaluation</rdfs:label>
+        <rdfs:label xml:lang="fr">évaluation des processus</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/pieo#qualitative_data -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/pieo#qualitative_data">
+        <rdf:type rdf:resource="http://purl.org/pieo#DataType"/>
+        <rdfs:comment xml:lang="fr">Ils ne s&apos;expriment pas par des chiffres, mais plutôt par le biais du langage ou parfois d&apos;images.</rdfs:comment>
+        <rdfs:comment xml:lang="en">They are expressed not in numbers, but rather by means of language or sometimes images.</rdfs:comment>
+        <rdfs:label xml:lang="fr">donnée qualitative</rdfs:label>
+        <rdfs:label xml:lang="en">qualitative data</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/pieo#quantitative_data -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/pieo#quantitative_data">
+        <rdf:type rdf:resource="http://purl.org/pieo#DataType"/>
+        <rdfs:comment xml:lang="fr">Il s&apos;agit de mesures numériques et elles sont généralement associées à des échelles ou à des mesures.</rdfs:comment>
+        <rdfs:comment xml:lang="en">They are numerical measurements and are commonly associated with scales or metrics.</rdfs:comment>
+        <rdfs:label xml:lang="fr">donnée quantitative</rdfs:label>
+        <rdfs:label xml:lang="en">quantitative data</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/pieo#qualitative_data"/>
+            <rdf:Description rdf:about="http://purl.org/pieo#quantitative_data"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
